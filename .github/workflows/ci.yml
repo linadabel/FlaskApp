@@ -35,6 +35,7 @@ jobs:
         with:
            username: ${{ secrets.DOCKER_USERNAME }}  # Utilisation du secret
            password: ${{ secrets.DOCKER_PASSWORD }}  # Utilisation du secret
-      - name: Push Docker image
+      - name: Push to another Docker registry
         run: |
-          docker push lina2607/flaskapp
+        docker tag lina2607/flaskapp1 lina2607/flaskapp1:latest
+        docker push lina2607/flaskapp1:latest
