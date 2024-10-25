@@ -33,9 +33,8 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_lina2607 }}
-          password: ${{ secrets.DOCKER_DABEL2607 }}
-
+           username: ${{ secrets.DOCKER_USERNAME }}  # Utilisation du secret
+          password: ${{ secrets.DOCKER_PASSWORD }}  # Utilisation du secret
       - name: Push Docker image
         run: |
           docker push lina2607/flaskapp
