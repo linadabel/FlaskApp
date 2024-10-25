@@ -28,8 +28,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t lina2607/flaskapp .
-
+          docker build -t lina2607/flaskapp1 .
+1
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
