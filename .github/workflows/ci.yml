@@ -33,7 +33,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_lina2607 }}
+          username: ${{ secrets.DOCKER_LINA2607 }}
           password: ${{ secrets.DOCKER_DABEL2607 }}
 
       - name: Push Docker image
