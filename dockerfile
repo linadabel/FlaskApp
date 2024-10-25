@@ -1,20 +1,18 @@
-# Dockerfile
+# Utilisation de l'image Python officielle
 FROM python:3.13-slim
 
-# Définir le répertoire de travail
+# Définition du répertoire de travail dans le conteneur
 WORKDIR /app
 
-# Copier les fichiers nécessaires dans le conteneur
-COPY requirements.txt .
-
-# Installer les dépendances
-RUN pip install -r requirements.txt
-
-# Copier le code de l'application
+# Copie des fichiers nécessaires dans le conteneur
+COPY requirements.txt requirements.txt
 COPY app.py app.py
 
-# Exposer le port 5000 pour l'application Flask
+# Installation des dépendances Flask
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Exposition du port 5000
 EXPOSE 5000
 
-# Commande pour exécuter l'application
-CMD ["python", "app.py"]
+# Lancement de l'application
+CMD ["python", "app.py"]
