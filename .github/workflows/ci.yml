@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Mise à jour vers checkout@v4 pour la compatibilité avec Node 20
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # Mise à jour vers setup-python@v5 pour la compatibilité avec Node 20
         with:
           python-version: '3.13'
 
