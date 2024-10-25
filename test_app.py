@@ -1,4 +1,4 @@
- import pytest
+import pytest
 from app import app
 
 def test_index():
@@ -6,3 +6,4 @@ def test_index():
     response = tester.get('/')
     assert response.status_code == 200
     assert b"Hello, World!" in response.data
+
