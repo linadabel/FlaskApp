@@ -40,4 +40,4 @@ jobs:
       - name: Push Docker image
         run: |
           docker tag flaskapp:latest lina2607/flaskapp:latest
-          docker push lina2607/flaskapp:latest
+          docker push lina2607/flaskapp:lates
