@@ -30,3 +30,12 @@ jobs:
         run: |
           pytest
         continue-on-error: true  # Only for debugging
+   
+    - name: Build Docker image
+      run: docker build -t flaskapp .
+
+    - name: Log in to Docker Hub
+      run: echo "${{ secrets.DOCKER_DABEL2607 }}" | docker login -u "${{ secrets.DOCKER_lina2607 }}" --password-stdin
+
+    - name: Push Docker image
+      run: docker tag flaskapp:latest lina2607/flaskapp:latest && docker push lina2607/flaskapp:latest
